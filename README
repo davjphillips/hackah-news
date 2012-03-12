@@ -1,0 +1,26 @@
+Hackernews clone - just clone this repo and start!
+
+
+
+add rspec to gem file
+add factory girl to gem file
+
+rails g rspec:install
+
+rails g model link url:string title:string
+
+
+link_spec.rb
+
+require 'spec_helper'
+
+describe Link do
+	it 'requires a url' do
+	  
+	  
+    # l = Link.new
+    # l.valid?.should be_false
+		# ^ assumes you do it through model validation
+		# l.save
+	end
+	
