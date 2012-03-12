@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Link do
   
   it 'requires a url' do
-    subject.should_not be_valid
+    should_not be_valid
     subject.errors[:url].should_not be_empty
   end
   
@@ -13,14 +13,14 @@ describe Link do
   end
   
   it 'does not allow duplicate urls' do
-    Link.create :title => "dont care", :url => "http://devbootcamp.com"
+    Link.create! :title => "dont care", :url => "http://devbootcamp.com"
     l = Link.new :title => "dont care", :url => "http://devbootcamp.com"
     l.should_not be_valid
     l.errors[:url].should_not be_empty
   end
-
-  it 'has a valid url' do
-    Link.new :title => "dont care", :url => "http://devbootcamp.com"
-  end
   
+  it 'has a valid url' do
+    l = Link.new :title => "dont care", :url => "123456"
+    l.should_not be_valid
+  end
 end

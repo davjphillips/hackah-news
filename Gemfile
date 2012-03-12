@@ -22,6 +22,8 @@ end
 
 gem 'jquery-rails'
 gem 'rspec-rails' 
+gem 'rspec-rails-matchers', '~> 0.2.1'
+gem 'capybara', '~> 1.1.2'
 
 group :test do
 	gem 'factory_girl_rails' 

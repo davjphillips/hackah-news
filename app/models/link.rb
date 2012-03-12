@@ -1,4 +1,5 @@
 class Link < ActiveRecord::Base
-  validates_presence_of :url, :title
-  validates_uniqueness_of :url
+  validates :url, :presence => true, :uniqueness => true, :format => {:with => URI.regexp}
+  validates :title, :presence => true
+  
 end

@@ -1,10 +1,12 @@
 HackahNews::Application.routes.draw do
-  get "links/new"
+  # get "links/new"
+  
+  resources :links
 
-  get "links/index"
-
-  get "links/create"
-
+  # get "links/index"
+  # 
+  #  get "links/create"
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
